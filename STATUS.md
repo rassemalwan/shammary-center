@@ -7,6 +7,7 @@
 - 2026-08-20: Renamed the Vercel project to `shammary-center` and assigned `https://shammary-center.vercel.app`.
 - 2026-08-20: Created the public GitHub repository `https://github.com/rassemalwan/shammary-center` and pushed the `main` branch.
 - 2026-08-20: Added the customer directory and rebalanced the launcher grid for four applications.
+- 2026-08-20: Prioritized the launcher order as Appointments, Customers, Quotation, then Invoice.
 
 ## What's next
 
