@@ -5,6 +5,7 @@
 - 2026-08-20: Created a responsive bilingual launcher for the quotation, invoice, and appointment applications.
 - 2026-08-20: Applied the Graphite & Porcelain identity, canonical company favicon, and deployment-local logo assets.
 - 2026-08-20: Renamed the Vercel project to `shammary-center` and assigned `https://shammary-center.vercel.app`.
+- 2026-08-20: Created the public GitHub repository `https://github.com/rassemalwan/shammary-center` and pushed the `main` branch.
 
 ## What's next
 
@@ -30,3 +31,4 @@
 - Local checks: semantic navigation, desktop and 390px mobile layouts, no horizontal overflow, keyboard focus states, reduced-motion handling, exact destination URLs, and zero console errors.
 - Production checks: HTTP 200, three exact application links, favicon HTTP 200, correct page title, and zero console errors.
 - Alias check: `shammary-center.vercel.app` returns HTTP 200 with the correct title and all three exact application links.
+- Repository check: `.env.local` and `.vercel` remain ignored; no credentials or Vercel project metadata are tracked.
