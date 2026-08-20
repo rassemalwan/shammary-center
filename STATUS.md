@@ -8,6 +8,7 @@
 - 2026-08-20: Created the public GitHub repository `https://github.com/rassemalwan/shammary-center` and pushed the `main` branch.
 - 2026-08-20: Added the customer directory and rebalanced the launcher grid for four applications.
 - 2026-08-20: Prioritized the launcher order as Appointments, Customers, Quotation, then Invoice.
+- 2026-08-20: Added iPhone and Android installation metadata with exact company-emblem icons at 180px, 192px, and 512px.
 
 ## What's next
 
@@ -26,6 +27,7 @@
 - The local folder remains `shammary`; the Vercel project is named `shammary-center`.
 - A dependency-free static page is sufficient for the current four-link map.
 - Identity assets are copied locally for independent Vercel deployment; canonical masters remain in `shammary-brand-assets`.
+- The launcher uses the native web app manifest and standalone display mode. Offline caching is intentionally omitted because every destination requires a network connection.
 
 ## QA / health score
 
@@ -34,3 +36,4 @@
 - Production checks: HTTP 200, four exact application links, favicon HTTP 200, correct page title, and zero console errors.
 - Alias check: `shammary-center.vercel.app` returns HTTP 200 with the correct title and all four exact application links.
 - Repository check: `.env.local` and `.vercel` remain ignored; no credentials or Vercel project metadata are tracked.
+- Install check: Chrome parsed the manifest with zero errors; 180px, 192px, and 512px icons are opaque RGB assets; iPhone metadata is present; the only headless installability notice is the expected incognito restriction.
