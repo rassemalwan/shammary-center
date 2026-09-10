@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111315">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="Executive contact card for Alshammary Hearing Center in Kuwait.">
+  <meta property="og:title" content="Alshammary Hearing Center">
+  <meta property="og:description" content="Contact, save, and connect with Alshammary Hearing Center.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://shammary-center.vercel.app/card/">
+  <title>Executive Contact | Alshammary Hearing Center</title>
+  <link rel="icon" type="image/png" href="/company-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #111315;
+      --ink-raised: #191c1f;
+      --line-dark: #343a3f;
+      --paper: #f7f5ef;
+      --paper-bright: #fffef9;
+      --line: #d8d4ca;
+      --graphite: #252a2e;
+      --steel: #aab4bc;
+      --muted-dark: #9ca4aa;
+      --muted-paper: #6e726f;
+      --text-paper: #222629;
+      --radius: 22px;
+      --control: 11px;
+      --ease: cubic-bezier(.22, 1, .36, 1);
+    }
+
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html { min-width: 320px; background: var(--ink); }
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      color: #f4f1ea;
+      background: var(--ink);
+      font-family: "IBM Plex Sans Arabic", "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button:focus-visible, a:focus-visible { outline: 3px solid #dce2e6; outline-offset: 3px; }
+
+    .page {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: calc(18px + env(safe-area-inset-top)) 0 calc(32px + env(safe-area-inset-bottom));
+    }
+    .utility {
+      min-height: 48px;
+      margin-bottom: clamp(24px, 6vw, 56px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .utility-label {
+      margin: 0;
+      color: var(--muted-dark);
+      font: 400 10px/1.4 "Aldrich", sans-serif;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .language-switch {
+      padding: 4px;
+      display: flex;
+      gap: 2px;
+      border: 1px solid var(--line-dark);
+      border-radius: 13px;
+      background: var(--ink-raised);
+    }
+    .language-switch button {
+      min-width: 48px;
+      min-height: 40px;
+      padding: 0 11px;
+      color: var(--muted-dark);
+      border: 0;
+      border-radius: 9px;
+      background: transparent;
+      font: 600 13px/1 "IBM Plex Sans Arabic", sans-serif;
+      cursor: pointer;
+    }
+    .language-switch button[aria-pressed="true"] { color: var(--text-paper); background: var(--paper); }
+
+    .folio {
+      overflow: hidden;
+      border: 1px solid var(--line-dark);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 28px 80px rgba(0, 0, 0, .3);
+    }
+    .identity {
+      min-height: 286px;
+      padding: clamp(34px, 6vw, 62px);
+      display: grid;
+      grid-template-columns: minmax(240px, .9fr) minmax(0, 1.1fr);
+      align-items: center;
+      gap: clamp(38px, 7vw, 76px);
+      background: var(--ink-raised);
+    }
+    .brand {
+      display: block;
+      width: min(100%, 292px);
+      color: inherit;
+      text-decoration: none;
+    }
+    .brand img {
+      display: block;
+      width: 100%;
+      height: auto;
+      filter: grayscale(1) invert(1) brightness(1.5);
+    }
+    .profile {
+      padding-inline-start: clamp(30px, 5vw, 52px);
+      border-inline-start: 1px solid var(--line-dark);
+    }
+    .eyebrow {
+      margin: 0;
+      color: var(--muted-dark);
+      font: 400 10px/1.5 "Aldrich", sans-serif;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .profile-name {
+      margin: 14px 0 10px;
+      color: #f6f3ec;
+      font: 400 clamp(32px, 5vw, 54px)/1.02 "Aldrich", "IBM Plex Sans Arabic", sans-serif;
+      letter-spacing: -.035em;
+    }
+    html[dir="rtl"] .profile-name {
+      font-family: "IBM Plex Sans Arabic", sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    .profile-title { margin: 0; color: #c9d0d4; font-size: 16px; line-height: 1.55; }
+
+    .contact-sheet { padding: clamp(28px, 5vw, 52px); color: var(--text-paper); }
+    .intro-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, .72fr);
+      align-items: end;
+      gap: 40px;
+    }
+    .promise { margin: 8px 0 0; max-width: 560px; color: var(--text-paper); font: 400 clamp(19px, 2.5vw, 25px)/1.45 "Aldrich", sans-serif; }
+    html[dir="rtl"] .promise { font-family: "IBM Plex Sans Arabic", sans-serif; font-weight: 500; }
+    .primary-actions { display: grid; grid-template-columns: 1fr 52px; gap: 10px; }
+    .button {
+      min-height: 52px;
+      padding: 0 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #f4f1ea;
+      border: 1px solid var(--graphite);
+      border-radius: var(--control);
+      background: var(--graphite);
+      font: 600 15px/1 "IBM Plex Sans Arabic", sans-serif;
+      cursor: pointer;
+      transition: transform 160ms var(--ease), background 160ms ease;
+    }
+    .button.secondary { padding: 0; color: var(--text-paper); border-color: var(--line); background: var(--paper-bright); }
+    .button:hover { transform: translateY(-2px); background: #343a3f; }
+    .button.secondary:hover { background: #fff; }
+    .button:active { transform: scale(.985); }
+    .button svg, .channel svg { width: 20px; height: 20px; flex: 0 0 auto; }
+
+    .channels {
+      margin: clamp(32px, 5vw, 46px) 0 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .channel {
+      min-height: 88px;
+      padding: 14px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--text-paper);
+      border: 1px solid var(--line);
+      border-radius: var(--control);
+      background: var(--paper-bright);
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      transition: background 160ms ease, border-color 160ms ease, transform 160ms var(--ease);
+    }
+    .channel:hover { border-color: #8d979e; background: #fff; transform: translateY(-2px); }
+    .channel:active { transform: scale(.985); }
+    .arrow { display: none; }
+
+    .information {
+      margin-top: clamp(34px, 5vw, 50px);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 188px;
+      gap: clamp(28px, 5vw, 52px);
+      align-items: end;
+    }
+    .details { border-top: 1px solid var(--line); }
+    .detail-row {
+      min-height: 60px;
+      padding: 13px 0;
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      align-items: center;
+      gap: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+    .detail-label { color: var(--muted-paper); font: 400 9px/1.4 "Aldrich", sans-serif; letter-spacing: .13em; text-transform: uppercase; }
+    html[dir="rtl"] .detail-label { font-family: "IBM Plex Sans Arabic", sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0; }
+    .detail-value { min-width: 0; color: var(--text-paper); font-size: 14px; font-weight: 600; line-height: 1.55; overflow-wrap: anywhere; }
+    .detail-value a { color: inherit; text-decoration-color: var(--steel); text-underline-offset: 3px; }
+    .ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+
+    .qr-section { text-align: center; }
+    .qr-frame { width: 118px; height: 118px; margin: 0 auto 14px; padding: 8px; display: block; border: 1px solid var(--line); background: #fff; }
+    .qr-frame img { display: block; width: 100%; height: 100%; }
+    .qr-section h2 { margin: 0 0 3px; font-size: 14px; }
+    .qr-section p { margin: 0; color: var(--muted-paper); font-size: 12px; line-height: 1.5; }
+
+    .privacy { margin: 16px 2px 0; color: #7e878d; font-size: 11px; line-height: 1.5; text-align: center; }
+    .toast {
+      position: fixed;
+      inset-inline: 16px;
+      bottom: calc(18px + env(safe-area-inset-bottom));
+      z-index: 20;
+      width: fit-content;
+      max-width: calc(100% - 32px);
+      margin-inline: auto;
+      padding: 12px 16px;
+      color: #f4f1ea;
+      border: 1px solid var(--line-dark);
+      border-radius: var(--control);
+      background: #22262a;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, .32);
+      font-size: 14px;
+      opacity: 0;
+      transform: translateY(12px);
+      pointer-events: none;
+      transition: opacity 180ms ease, transform 180ms var(--ease);
+    }
+    .toast.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 720px) {
+      .identity { grid-template-columns: 1fr; gap: 32px; }
+      .brand { width: min(75vw, 280px); }
+      .profile { padding-inline-start: 0; padding-top: 28px; border-inline-start: 0; border-top: 1px solid var(--line-dark); }
+      .intro-row { grid-template-columns: 1fr; align-items: start; gap: 24px; }
+      .information { grid-template-columns: 1fr; align-items: start; }
+      .qr-section { display: grid; grid-template-columns: 94px 1fr; align-items: center; gap: 18px; text-align: start; }
+      .qr-frame { width: 94px; height: 94px; margin: 0; }
+    }
+    @media (max-width: 500px) {
+      .page { width: calc(100% - 20px); padding-top: calc(10px + env(safe-area-inset-top)); }
+      .utility { margin-bottom: 18px; }
+      .utility-label { max-width: 150px; font-size: 8px; }
+      .folio { border-radius: 18px; }
+      .identity { min-height: 0; padding: 34px 24px 30px; }
+      .brand { width: min(72vw, 250px); }
+      .profile-name { font-size: 32px; }
+      .contact-sheet { padding: 28px 20px 30px; }
+      .channels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .detail-row { grid-template-columns: 76px 1fr; gap: 12px; }
+      .privacy { padding-inline: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+    <symbol id="i-save" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M5 17v3h14v-3"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.3 10.8 7.4-4.5m-7.4 6.9 7.4 4.5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3.5 10 8l-2.2 2.1c1.1 2.7 3.3 4.9 6 6l2.2-2.2 4.5 3.4-1.3 2.8c-.4.8-1.2 1.3-2.1 1.2C9.5 20.5 3.5 14.5 2.7 6.9c-.1-.9.4-1.7 1.2-2.1z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"/><path d="M8.5 9.5c.7 2.2 2 3.5 4.2 4.2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-web" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.2 2.5 3.3 5.5 3.3 9S14.2 18.5 12 21c-2.2-2.5-3.3-5.5-3.3-9S9.8 5.5 12 3z"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-social" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></symbol>
+  </svg>
+
+  <div class="page">
+    <header class="utility">
+      <p class="utility-label" data-i18n="utility">NFC executive contact · Kuwait</p>
+      <div class="language-switch" aria-label="Language">
+        <button type="button" data-language="en" aria-pressed="true">EN</button>
+        <button type="button" data-language="ar" aria-pressed="false">عربي</button>
+      </div>
+    </header>
+
+    <main>
+      <article class="folio" aria-labelledby="profile-name">
+        <header class="identity">
+          <a class="brand" href="https://shc-m.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Alshammary Hearing Center website">
+            <img src="/logo.png" alt="Alshammary Hearing Center">
+          </a>
+          <div class="profile">
+            <p class="eyebrow" data-i18n="introduction">Executive contact</p>
+            <h1 class="profile-name" id="profile-name">Alshammary Hearing Center</h1>
+            <p class="profile-title" id="profile-title">Trusted hearing-care leadership</p>
+          </div>
+        </header>
+
+        <section class="contact-sheet">
+          <div class="intro-row">
+            <div>
+              <p class="eyebrow" style="color:var(--muted-paper)" data-i18n="positioning">Alshammary Hearing Center</p>
+              <p class="promise" data-i18n="promise">Personal attention. Clinical precision. Better hearing.</p>
+            </div>
+            <div class="primary-actions">
+              <button class="button" type="button" id="save-contact"><svg aria-hidden="true"><use href="#i-save"/></svg><span data-i18n="save">Save contact</span></button>
+              <button class="button secondary" type="button" id="share-card" aria-label="Share card" data-i18n-aria="shareLabel"><svg aria-hidden="true"><use href="#i-share"/></svg></button>
+            </div>
+          </div>
+
+          <nav class="channels" aria-label="Contact actions" data-i18n-aria="actionsLabel">
+            <a class="channel" id="call-link" href="tel:+96522492691"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="call">Call</span><span class="arrow" aria-hidden="true">→</span></a>
+            <a class="channel" id="whatsapp-link" href="https://wa.me/96522492691" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-chat"/></svg><span>WhatsApp</span><span class="arrow" aria-hidden="true">→</span></a>
+            <a class="channel" id="email-link" href="mailto:info@shc-m.com"><svg aria-hidden="true"><use href="#i-mail"/></svg><span data-i18n="email">Email</span><span class="arrow" aria-hidden="true">→</span></a>
+            <a class="channel" href="https://shc-m.com" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-web"/></svg><span data-i18n="website">Website</span><span class="arrow" aria-hidden="true">→</span></a>
+            <a class="channel" href="https://maps.app.goo.gl/B8W18nSZ5UjfoBHd6" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-map"/></svg><span data-i18n="directions">Directions</span><span class="arrow" aria-hidden="true">→</span></a>
+            <a class="channel" href="https://www.instagram.com/alshammary_hearing_kuwait/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-social"/></svg><span>Instagram</span><span class="arrow" aria-hidden="true">→</span></a>
+          </nav>
+
+          <div class="information">
+            <div class="details">
+              <div class="detail-row" id="direct-row" hidden><span class="detail-label" data-i18n="direct">Direct</span><span class="detail-value ltr" id="direct-value"></span></div>
+              <div class="detail-row"><span class="detail-label" data-i18n="center">Center</span><span class="detail-value ltr"><a href="tel:+96522492691">+965 224 92 691</a> · <a href="tel:+96522282412">+965 222 82 412</a></span></div>
+              <div class="detail-row"><span class="detail-label" data-i18n="online">Online</span><span class="detail-value"><a class="ltr" href="mailto:info@shc-m.com">info@shc-m.com</a><br><a class="ltr" href="https://shc-m.com" target="_blank" rel="noopener noreferrer">shc-m.com</a></span></div>
+              <div class="detail-row"><span class="detail-label" data-i18n="location">Location</span><span class="detail-value" data-i18n="address">Fahad Al-Salem Street, Kuwait City, Kuwait</span></div>
+            </div>
+            <div class="qr-section">
+              <a class="qr-frame" href="/card/card-qr.svg" target="_blank" rel="noopener noreferrer" aria-label="Open card QR code"><img src="/card/card-qr.svg" alt="QR code for this contact card"></a>
+              <div><h2 data-i18n="scanTitle">Scan to share</h2><p data-i18n="scanCopy">For moments when NFC is unavailable.</p></div>
+            </div>
+          </div>
+        </section>
+      </article>
+      <p class="privacy" data-i18n="privacy">This page is public and intended for sharing business contact information.</p>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // Add the approved executive details here; empty fields fall back to the center contact.
+    const PROFILE = {
+      nameEn: "",
+      nameAr: "",
+      titleEn: "",
+      titleAr: "",
+      directPhone: "",
+      directWhatsapp: "",
+      directEmail: "",
+      cardUrl: "https://shammary-center.vercel.app/card/"
+    };
+
+    const COMPANY = {
+      nameEn: "Alshammary Hearing Center",
+      nameAr: "مركز الشمري للسمع",
+      phonePrimary: "+96522492691",
+      phoneSecondary: "+96522282412",
+      whatsapp: "+96522492691",
+      email: "info@shc-m.com",
+      website: "https://shc-m.com",
+      instagram: "https://www.instagram.com/alshammary_hearing_kuwait/",
+      maps: "https://maps.app.goo.gl/B8W18nSZ5UjfoBHd6",
+      addressEn: "Fahad Al-Salem Street, Kuwait City, Kuwait",
+      addressAr: "شارع فهد السالم، مدينة الكويت، الكويت"
+    };
+
+    const COPY = {
+      en: {
+        utility: "NFC executive contact · Kuwait", introduction: "Executive contact",
+        positioning: COMPANY.nameEn, promise: "Personal attention. Clinical precision. Better hearing.",
+        save: "Save contact", call: "Call", email: "Email", website: "Website", directions: "Directions",
+        direct: "Direct", center: "Center", online: "Online", location: "Location", address: COMPANY.addressEn,
+        scanTitle: "Scan to share", scanCopy: "For moments when NFC is unavailable.",
+        privacy: "This page is public and intended for sharing business contact information.",
+        actionsLabel: "Contact actions", shareLabel: "Share card",
+        profileFallback: COMPANY.nameEn, titleFallback: "Trusted hearing-care leadership",
+        copied: "Card link copied", saved: "Contact file downloaded", shareFailed: "Sharing was unavailable"
+      },
+      ar: {
+        utility: "بطاقة تواصل تنفيذية عبر NFC · الكويت", introduction: "تواصل تنفيذي",
+        positioning: COMPANY.nameAr, promise: "اهتمام شخصي. دقة سريرية. سمع أفضل.",
+        save: "حفظ جهة الاتصال", call: "اتصال", email: "البريد", website: "الموقع", directions: "الاتجاهات",
+        direct: "مباشر", center: "المركز", online: "إلكتروني", location: "العنوان", address: COMPANY.addressAr,
+        scanTitle: "امسح للمشاركة", scanCopy: "عند تعذر الاتصال عبر NFC.",
+        privacy: "هذه الصفحة عامة ومخصصة لمشاركة معلومات التواصل المهنية.",
+        actionsLabel: "خيارات التواصل", shareLabel: "مشاركة البطاقة",
+        profileFallback: COMPANY.nameAr, titleFallback: "ريادة موثوقة في رعاية السمع",
+        copied: "تم نسخ رابط البطاقة", saved: "تم تنزيل جهة الاتصال", shareFailed: "تعذرت المشاركة"
+      }
+    };
+
+    let language = "en";
+    let toastTimer;
+    const digits = value => value.replace(/\D/g, "");
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      clearTimeout(toastTimer);
+      toast.textContent = message;
+      toast.classList.add("visible");
+      toastTimer = setTimeout(() => toast.classList.remove("visible"), 2600);
+    }
+
+    function renderProfile() {
+      const name = language === "ar" ? PROFILE.nameAr : PROFILE.nameEn;
+      const title = language === "ar" ? PROFILE.titleAr : PROFILE.titleEn;
+      document.getElementById("profile-name").textContent = name || COPY[language].profileFallback;
+      document.getElementById("profile-title").textContent = title || COPY[language].titleFallback;
+      const direct = PROFILE.directPhone || PROFILE.directWhatsapp;
+      document.getElementById("direct-row").hidden = !direct;
+      document.getElementById("direct-value").textContent = direct;
+      document.getElementById("call-link").href = `tel:${PROFILE.directPhone || COMPANY.phonePrimary}`;
+      document.getElementById("whatsapp-link").href = `https://wa.me/${digits(PROFILE.directWhatsapp || PROFILE.directPhone || COMPANY.whatsapp)}`;
+      document.getElementById("email-link").href = `mailto:${PROFILE.directEmail || COMPANY.email}`;
+    }
+
+    function setLanguage(next) {
+      language = next;
+      document.documentElement.lang = language;
+      document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+      document.querySelectorAll("[data-i18n]").forEach(element => element.textContent = COPY[language][element.dataset.i18n]);
+      document.querySelectorAll("[data-i18n-aria]").forEach(element => element.setAttribute("aria-label", COPY[language][element.dataset.i18nAria]));
+      document.querySelectorAll("[data-language]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.language === language)));
+      renderProfile();
+    }
+
+    function escapeVcard(value) {
+      return String(value || "").replace(/\\/g, "\\\\").replace(/\n/g, "\\n").replace(/,/g, "\\,").replace(/;/g, "\\;");
+    }
+
+    function makeVcard() {
+      const name = PROFILE.nameEn || COMPANY.nameEn;
+      const lines = [
+        "BEGIN:VCARD", "VERSION:3.0", `N;CHARSET=UTF-8:;${escapeVcard(name)};;;`,
+        `FN;CHARSET=UTF-8:${escapeVcard(name)}`, `ORG;CHARSET=UTF-8:${escapeVcard(COMPANY.nameEn)};${escapeVcard(COMPANY.nameAr)}`,
+        `TITLE;CHARSET=UTF-8:${escapeVcard(PROFILE.titleEn || "Hearing Care Center")}`
+      ];
+      if (PROFILE.directPhone) lines.push(`TEL;TYPE=CELL,VOICE:${PROFILE.directPhone}`);
+      lines.push(`TEL;TYPE=WORK,VOICE:${COMPANY.phonePrimary}`, `TEL;TYPE=WORK,VOICE:${COMPANY.phoneSecondary}`,
+        `TEL;TYPE=CELL:${PROFILE.directWhatsapp || PROFILE.directPhone || COMPANY.whatsapp}`,
+        `EMAIL;TYPE=INTERNET,WORK:${PROFILE.directEmail || COMPANY.email}`,
+        `ADR;TYPE=WORK;CHARSET=UTF-8:;;${escapeVcard(COMPANY.addressEn)};;;;`, `URL;TYPE=WORK:${COMPANY.website}`,
+        `URL;TYPE=HOME:${PROFILE.cardUrl}`,
+        `NOTE;CHARSET=UTF-8:${escapeVcard(`${COMPANY.nameAr} | Instagram: @alshammary_hearing_kuwait | Maps: ${COMPANY.maps}`)}`,
+        "END:VCARD");
+      return lines.join("\r\n");
+    }
+
+    function downloadContact() {
+      const url = URL.createObjectURL(new Blob([makeVcard()], { type: "text/vcard;charset=utf-8" }));
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `${(PROFILE.nameEn || "alshammary-contact").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "alshammary-contact"}.vcf`;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      showToast(COPY[language].saved);
+    }
+
+    async function shareCard() {
+      const data = { title: PROFILE.nameEn || COMPANY.nameEn, text: `${PROFILE.nameEn || COMPANY.nameEn} · ${PROFILE.titleEn || COMPANY.nameEn}`, url: PROFILE.cardUrl };
+      try {
+        if (navigator.share) await navigator.share(data);
+        else { await navigator.clipboard.writeText(PROFILE.cardUrl); showToast(COPY[language].copied); }
+      } catch (error) {
+        if (error.name !== "AbortError") showToast(COPY[language].shareFailed);
+      }
+    }
+
+    document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.language)));
+    document.getElementById("save-contact").addEventListener("click", downloadContact);
+    document.getElementById("share-card").addEventListener("click", shareCard);
+    setLanguage("en");
+  </script>
+</body>
+</html>
+
+

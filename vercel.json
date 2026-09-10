@@ -1,4 +1,14 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": true,
+  "rewrites": [
+    {
+      "source": "/invoice/",
+      "destination": "https://shammary-invoice.vercel.app/"
+    },
+    {
+      "source": "/invoice/:path*",
+      "destination": "https://shammary-invoice.vercel.app/:path*"
+    }
+  ]
 }
