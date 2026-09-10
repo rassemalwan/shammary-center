@@ -14,7 +14,6 @@
 
 ## What's next
 
-- P1: Verify the new `/card/` route after the Center production deployment completes.
 - P1: Run one live staff login, archive, and print-path smoke test at `https://shammary-center.vercel.app/invoice/`.
 - P2: Move another application under the center only after the Invoice pilot passes live QA.
 - P2: Add future applications only when they are ready for staff use.
@@ -41,6 +40,7 @@
 ## QA / health score
 
 - 2026-09-10 launcher check: the fifth card is a standalone accessible link with `noopener noreferrer`; the desktop grid now lays out 3+2 and existing tablet/mobile breakpoints remain unchanged.
+- 2026-09-10 production check: deployed `2182ef3`, reassigned `shammary-center.vercel.app`, confirmed five launcher links, and verified `/card/` plus its QR asset on the live domain.
 - Health: 98/100. Local, preview, and production routing checks pass; the remaining two points require a live authenticated archive/print check by staff.
 - 2026-08-30 pilot checks: Vercel CLI 59.10.0 build passed. The first preview exposed a real root-route 404, fixed with an explicit `/invoice/` rewrite. The corrected preview passed at 1440×900, 768×1024, and 375×812 with LCP 620–992ms, CLS 0, native invalid-input blocking, correct email/password/submit keyboard order, all proxied assets HTTP 200, no horizontal overflow, and zero console, failed-request, or HTTP error responses. The exact tested preview was promoted; the manual `shammary-center.vercel.app` alias was reassigned to the new production deployment. Final production checks passed at desktop and mobile, and the exact `/invoice/` URL returns HTTP 200 with the Invoice login gate.
 - Local checks: semantic navigation, desktop and 390px mobile layouts, no horizontal overflow, keyboard focus states, reduced-motion handling, exact destination URLs, and zero console errors.
