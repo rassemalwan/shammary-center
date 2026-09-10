@@ -59,15 +59,8 @@
       margin-bottom: clamp(24px, 6vw, 56px);
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       gap: 18px;
-    }
-    .utility-label {
-      margin: 0;
-      color: var(--muted-dark);
-      font: 400 10px/1.4 "Aldrich", sans-serif;
-      letter-spacing: .16em;
-      text-transform: uppercase;
     }
     .language-switch {
       padding: 4px;
@@ -231,7 +224,6 @@
     .qr-section h2 { margin: 0 0 3px; font-size: 14px; }
     .qr-section p { margin: 0; color: var(--muted-paper); font-size: 12px; line-height: 1.5; }
 
-    .privacy { margin: 16px 2px 0; color: #7e878d; font-size: 11px; line-height: 1.5; text-align: center; }
     .toast {
       position: fixed;
       inset-inline: 16px;
@@ -266,7 +258,6 @@
     @media (max-width: 500px) {
       .page { width: calc(100% - 20px); padding-top: calc(10px + env(safe-area-inset-top)); }
       .utility { margin-bottom: 18px; }
-      .utility-label { max-width: 150px; font-size: 8px; }
       .folio { border-radius: 18px; }
       .identity { min-height: 0; padding: 34px 24px 30px; }
       .brand { width: min(72vw, 250px); }
@@ -274,7 +265,6 @@
       .contact-sheet { padding: 28px 20px 30px; }
       .channels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .detail-row { grid-template-columns: 76px 1fr; gap: 12px; }
-      .privacy { padding-inline: 16px; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
@@ -295,7 +285,6 @@
 
   <div class="page">
     <header class="utility">
-      <p class="utility-label" data-i18n="utility">NFC executive contact · Kuwait</p>
       <div class="language-switch" aria-label="Language">
         <button type="button" data-language="en" aria-pressed="true">EN</button>
         <button type="button" data-language="ar" aria-pressed="false">عربي</button>
@@ -350,7 +339,6 @@
           </div>
         </section>
       </article>
-      <p class="privacy" data-i18n="privacy">This page is public and intended for sharing business contact information.</p>
     </main>
   </div>
 
@@ -385,23 +373,21 @@
 
     const COPY = {
       en: {
-        utility: "NFC executive contact · Kuwait", introduction: "Executive contact",
+        introduction: "Executive contact",
         positioning: COMPANY.nameEn, promise: "Personal attention. Clinical precision. Better hearing.",
         save: "Save contact", call: "Call", email: "Email", website: "Website", directions: "Directions",
         direct: "Direct", center: "Center", online: "Online", location: "Location", address: COMPANY.addressEn,
         scanTitle: "Scan to share", scanCopy: "For moments when NFC is unavailable.",
-        privacy: "This page is public and intended for sharing business contact information.",
         actionsLabel: "Contact actions", shareLabel: "Share card",
         profileFallback: COMPANY.nameEn, titleFallback: "Trusted hearing-care leadership",
         copied: "Card link copied", saved: "Contact file downloaded", shareFailed: "Sharing was unavailable"
       },
       ar: {
-        utility: "بطاقة تواصل تنفيذية عبر NFC · الكويت", introduction: "تواصل تنفيذي",
+        introduction: "تواصل تنفيذي",
         positioning: COMPANY.nameAr, promise: "اهتمام شخصي. دقة سريرية. سمع أفضل.",
         save: "حفظ جهة الاتصال", call: "اتصال", email: "البريد", website: "الموقع", directions: "الاتجاهات",
         direct: "مباشر", center: "المركز", online: "إلكتروني", location: "العنوان", address: COMPANY.addressAr,
         scanTitle: "امسح للمشاركة", scanCopy: "عند تعذر الاتصال عبر NFC.",
-        privacy: "هذه الصفحة عامة ومخصصة لمشاركة معلومات التواصل المهنية.",
         actionsLabel: "خيارات التواصل", shareLabel: "مشاركة البطاقة",
         profileFallback: COMPANY.nameAr, titleFallback: "ريادة موثوقة في رعاية السمع",
         copied: "تم نسخ رابط البطاقة", saved: "تم تنزيل جهة الاتصال", shareFailed: "تعذرت المشاركة"
@@ -494,5 +480,4 @@
   </script>
 </body>
 </html>
-
 

@@ -2,6 +2,7 @@
 
 ## What's done
 
+- 2026-09-10: Removed the top NFC/Kuwait caption and bottom public-information caption from the embedded Business Card page.
 - 2026-09-10: Added the bilingual Business Card launcher as app 05 and rebalanced the desktop launcher to three columns.
 - 2026-08-30: Added and deployed the first single-domain pilot: `https://shammary-center.vercel.app/invoice/` now proxies to the independently deployed `shammary-invoice` Vercel project, and the Invoice launcher card uses the center-domain path.
 - 2026-08-20: Created a responsive bilingual launcher for the quotation, invoice, appointment, and customer applications.
